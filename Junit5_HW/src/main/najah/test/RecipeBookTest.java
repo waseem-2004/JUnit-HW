@@ -260,11 +260,11 @@ public class RecipeBookTest {
     void testDeleteAfterReplace() {
         book.addRecipe(recipe);
 
-        book.deleteRecipe(0); // هسا صار في Recipe فاضية
+        book.deleteRecipe(0); 
 
         String result = book.deleteRecipe(0);
 
-        assertEquals("", result); // لأنه recipe فاضية اسمها ""
+        assertEquals("", result); 
     }
     
     @Test
@@ -279,7 +279,7 @@ public class RecipeBookTest {
         book.addRecipe(r1);
         book.addRecipe(r2);
 
-        book.deleteRecipe(0); // صار index 0 فيه Recipe فاضية
+        book.deleteRecipe(0);   
 
         Recipe r3 = new Recipe();
         r3.setName("C");
@@ -292,14 +292,14 @@ public class RecipeBookTest {
     void testEditAfterEmptyRecipe() {
         book.addRecipe(recipe);
 
-        book.deleteRecipe(0); // صار فيه Recipe فاضية
+        book.deleteRecipe(0); 
 
         Recipe newRecipe = new Recipe();
         newRecipe.setName("New");
 
         String result = book.editRecipe(0, newRecipe);
 
-        assertEquals("", result); // الاسم القديم فاضي
+        assertEquals("", result); 
     }
 
 
